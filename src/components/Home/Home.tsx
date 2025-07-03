@@ -1,0 +1,24 @@
+import { tabsData } from "@/json/technologytabs";
+import CompanyOverview from "./CompanyOverview";
+import HeroSection from "./HeroSection";
+import Services360 from "./Service360";
+import TechnologyTabs from "./Tech/Technologytabs";
+import WorkingProcess from "./WorkingProcess";
+import TestimonialCarousel from "./Testtominal";
+
+export default function HomePage() {
+  return (
+    <>
+    
+        <HeroSection />
+        <CompanyOverview />
+        <Services360/>
+       
+        <TechnologyTabs data={tabsData} />
+         <WorkingProcess />;
+         <TestimonialCarousel/>
+    
+      
+    </>
+  );
+}
