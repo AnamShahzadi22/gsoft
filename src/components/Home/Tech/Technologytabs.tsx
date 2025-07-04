@@ -49,7 +49,7 @@ export default function TechnologyTabs({ data }: TechnologyTabsProps) {
                       {tab.technologies.map((tech) => (
                         <div
                           key={tech.name}
-                          className="flex flex-col items-center w-28 md:w-32"
+                          className="flex flex-col items-center justify-center w-28 md:w-32"
                         >
                           <Image
                             src={tech.logo}
@@ -58,7 +58,7 @@ export default function TechnologyTabs({ data }: TechnologyTabsProps) {
                             height={64}
                             className="mb-2 object-contain"
                           />
-                          <p className="text-xl font-bold text-navbg">
+                          <p className="text-sm lg:text-xl font-bold text-navbg">
                             {tech.name}
                           </p>
                         </div>

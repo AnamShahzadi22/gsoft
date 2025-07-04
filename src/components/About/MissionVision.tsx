@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MissionVision = () => {
   return (
-    <section className="bg-navbg text-white py-16 px-35  ">
+    <section className="bg-navbg text-white py-16  px-5 lg:px-35  ">
       <div className=" flex flex-col md:flex-row items-start justify-between gap-12">
         
         {/* Mission */}
@@ -18,7 +18,7 @@ const MissionVision = () => {
           </div>
           <p className="font-semibold mb-2">Work with the Tech Leader.</p>
           <h2 className="text-4xl font-bold mb-4">Our Mission</h2>
-          <p >
+          <p  className="justify-end">
             GSoft strives to provide Quality Services of Web Development,
             Mobile App Development, Custom Software Development, DevOps, QA
             Testing and UI/UX Designing to startup businesses to grow in this

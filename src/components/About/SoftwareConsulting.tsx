@@ -13,8 +13,10 @@ const SoftwareConsulting = () => {
 
       <div className="flex-1">
         <p className="text-black mb-2">Work with the Tech Leader.</p>
-        <h1 className="text-4xl sm:text-5xl  mb-6 text-black">
-          Software Development <br /> Company | Global <br /> Software Consulting
+    
+
+        <h1 className=" text-3xl md:text-4xl  lg:text-5xl mb-6 text-black">
+          Software Development Company | Global Software Consulting
         </h1>
         <p className="text-[#555555] leading-relaxed ">
           Welcome to GSoft! A Leading software development company who is
@@ -32,13 +34,15 @@ const SoftwareConsulting = () => {
       </div>
 
       {/* Image */}
-      <div className="  hidden  md:block flex-1 max-w-md w-full ">
+      <div className="  hidden  lg:block flex-1 max-w-md w-full ">
         <div className="relative w-full h-96  overflow-hidden ">
           <Image
             src="/images/about/person.png" 
             alt="Software Consulting"
             fill
-            className="object-cover"
+          
+             className="object-cover "
+  
           />
         </div>
       </div>

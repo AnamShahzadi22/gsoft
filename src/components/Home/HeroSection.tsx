@@ -9,7 +9,7 @@ import { Button } from "@heroui/react";
 
 export default function HeroSection() {
   return (
-    <div className="relative w-full h-screen  ">
+    <div className="relative   w-full h-[600px] lg:h-[700px]  ">
       {/* Background Image */}
       <Image
         src="/images/gsoftherobanner.png"
@@ -23,7 +23,7 @@ export default function HeroSection() {
       <div className="absolute inset-0  bg-opacity-50 z-10" />
 
       {/* Content on top */}
-      <div className="relative  z-20 flex  items-center-safe   mx-12 lg:mx-25  h-full ">
+      <div className="relative  z-20 flex  items-center-safe   mx-1 lg:mx-25  h-full ">
         <div className="px-4 sm:px-6 lg:px-8 ">
   <AnimateOnView variants={fadeLeft}>
   <div className="text-left max-w-3xl mx-auto  text-white">
@@ -51,7 +51,7 @@ export default function HeroSection() {
     href="#"
     variant="bordered"
     radius="sm"
-     className="mt-8 bg-transparent text-xl border border-cyan text-white font-semibold py-6 px-12 rounded hover:bg-cyan hover:border-white transition cursor-pointer"
+     className="mt-8 bg-transparent text-xl border border-cyan text-white font-semibold py-6 px-9 md:px-12 rounded hover:bg-cyan hover:border-white transition cursor-pointer"
   >
     {`Let's discuss your project`}
   </Button>

@@ -51,7 +51,7 @@ const NavBar = () => {
         isMenuOpen={menuOpen}
         onMenuOpenChange={setMenuOpen}
         classNames={{
-          base: `sticky top-0 z-[999] w-full transition-all ${
+          base: `sticky top-0 z-[999] w-full transition-all backdrop-blur-none backdrop-filter-none ${
             scrolled
               ? "bg-navbg shadow-md"
               : "bg-transparent absolute top-0 left-0 w-full"

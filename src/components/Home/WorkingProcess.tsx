@@ -4,7 +4,7 @@ import AnimateOnView from "../HOC/Animation/MotionWrapper";
 
 export default function WorkingProcess() {
   return (
-    <section className="w-full    px-4 md:px-12 lg:px-24 bg-navbg text-center text-white lg:h-[700px]  md:h-[900px] ">
+    <section className="w-full    px-4 md:px-12 lg:px-24 bg-navbg text-center text-white  lg:h-[700px]    ">
       <div className="mb-12 text-start z-[999] pt-10">
         <p className="text-lg mb-2 text-gray-300">Work Flow</p>
         <h2 className="text-5xl font-bold">Our Working Process</h2>
