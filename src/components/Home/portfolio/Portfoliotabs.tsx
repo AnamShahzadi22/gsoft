@@ -18,12 +18,13 @@ export default function PortfolioTabs() {
         aria-label="Technology Tabs"
         items={portfoliodata}
         variant="underlined"
-        color="primary"
+      
         classNames={{
           base: "w-full flex justify-center",
           tabList: "flex justify-center gap-6",
           tab: "text-sm font-semibold transition-all duration-300",
           tabContent: "pb-2",
+          cursor: "bg-cyan",
           panel: "pt-8 flex justify-center",
         }}
       >

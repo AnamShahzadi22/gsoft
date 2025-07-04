@@ -38,7 +38,7 @@ export default function ClientsGrid() {
           <Card
             key={index}
             className={`
-              max-w-sm w-full border rounded border-white bg-transparent p-4
+              max-w-sm w-full border rounded border-white bg-transparent p-0 lg:p-4
               ${index === 3 ? 'lg:col-start-1' : ''}
               ${index === 4 ? 'lg:col-start-3' : ''}
               mx-auto

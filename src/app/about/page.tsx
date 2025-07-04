@@ -5,7 +5,14 @@ import SoftwareConsulting from '@/components/About/SoftwareConsulting'
 import StatsSection from '@/components/About/StatsSection'
 import PortfolioTabs from '@/components/Home/portfolio/Portfoliotabs'
 import Testimonial from '@/components/Home/Testtominal'
+import { Metadata } from 'next'
 import React from 'react'
+
+//Meta Data for About Page 
+export const metadata: Metadata = {
+  title: "About GSoft Consulting - A Leading Technology Consultency",
+ 
+};
 
 const About = () => {
   return (

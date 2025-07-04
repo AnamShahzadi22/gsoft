@@ -31,12 +31,13 @@ export default function TechnologyTabs({ data }: TechnologyTabsProps) {
             aria-label="Technology Tabs"
             items={data}
             variant="underlined"
-            color="primary"
+           
             classNames={{
               base: "w-full flex justify-center",
               tabList: "flex justify-center gap-8",
               tab: "text-sm font-medium transition-all duration-300",
               tabContent: "pb-2",
+              cursor: "bg-cyan",
               panel: "pt-8 flex justify-center",
             }}
           >
