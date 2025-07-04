@@ -4,6 +4,7 @@ import "./globals.css";
 import ClientProviders from "@/components/ClientProvider";
 import NavBar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import WhatsAppFloating from "@/components/Footer/WhatsapFloating";
 
 const font = Montserrat({
 weight: ['100','200','300','400','500','600','700','800','900' ],
@@ -35,6 +36,7 @@ export default function RootLayout({
 
   {children}
   <Footer/>
+  <WhatsAppFloating/>
       </ClientProviders>
       
       </body>
