@@ -4,13 +4,20 @@ import { Button } from "@heroui/react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState, useRef } from "react";
 import { serviceSections } from "@/json/navbar";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+
+
 
 const ServicesDropdown = () => {
   const [open, setOpen] = useState(false); // desktop
   const [isMobileOpen, setIsMobileOpen] = useState(false); // mobile
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  
+  const pathname = usePathname();
+const isActive = pathname.startsWith("/services"); 
+const servicesHref = "/services";
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -33,19 +40,29 @@ const ServicesDropdown = () => {
         onClick={handleMouseLeave}
       >
         <Button
-          disableRipple
-          variant="flat"
-          className="text-white bg-transparent hover:bg-white/4 p-2 text-lg"
-          endContent={
-            open ? (
-              <ChevronUp size={18} className="transition-transform" />
-            ) : (
-              <ChevronDown size={18} className="transition-transform" />
-            )
-          }
-        >
-          Services
-        </Button>
+  as={Link}
+  href={servicesHref}
+  disableRipple
+  variant="flat"
+  className={`p-2 text-lg transition-all
+    ${isActive ? "text-cyan" : "text-white hover:bg-white/4 bg-transparent"}`}
+  endContent={
+    open ? (
+      <ChevronUp
+        size={18}
+        className={`transition-transform ${isActive ? "text-cyan" : "text-white"}`}
+      />
+    ) : (
+      <ChevronDown
+        size={18}
+        className={`transition-transform ${isActive ? "text-cyan" : "text-white"}`}
+      />
+    )
+  }
+>
+  Services
+</Button>
+
 
         {open && (
           <div className="absolute  -translate-x-1/6 mt-7 w-[80vw] max-w-5xl  bg-white  rounded-xl shadow-xl grid grid-cols-4 gap-7">

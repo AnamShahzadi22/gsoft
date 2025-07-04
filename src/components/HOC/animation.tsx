@@ -12,7 +12,7 @@ export const fadeUphover = {
   y: -170,
   opacity: 1,
   transition: {
-    duration: 0.9,
+    duration: 0.5,
   
     
   },

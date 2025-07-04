@@ -4,7 +4,8 @@ import HeroSection from "./HeroSection";
 import Services360 from "./Service360";
 import TechnologyTabs from "./Tech/Technologytabs";
 import WorkingProcess from "./WorkingProcess";
-import TestimonialCarousel from "./Testtominal";
+import PortfolioTabs from "./portfolio/Portfoliotabs";
+import Testimonial from "./Testtominal";
 
 export default function HomePage() {
   return (
@@ -15,8 +16,9 @@ export default function HomePage() {
         <Services360/>
        
         <TechnologyTabs data={tabsData} />
-         <WorkingProcess />;
-         <TestimonialCarousel/>
+         <WorkingProcess />
+         <PortfolioTabs/>
+         <Testimonial/>
     
       
     </>

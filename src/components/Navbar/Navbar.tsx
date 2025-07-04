@@ -15,12 +15,14 @@ import Image from "next/image";
 import Link from "next/link";
 import ServicesDropdown from "./ServicesDropdown";
 import { HiMenu, HiX } from "react-icons/hi";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const pathname = usePathname();
+ 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -73,18 +75,22 @@ const NavBar = () => {
         {/* Desktop Menu */}
         <NavbarContent className="hidden xl:flex justify-center gap-10 " justify="center">
           {/* Company */}
-          {menuItems.slice(0, 1).map((item) => (
-            <NavbarItem key={item.name}>
-              <Button
-                as={Link}
-                href={item.href}
-                variant="flat"
-                className="bg-transparent text-white p-2 text-lg hover:bg-white/4 "
-              >
-                {item.name}
-              </Button>
-            </NavbarItem>
-          ))}
+         {menuItems.slice(0, 1).map((item) => {
+  const isActive = pathname === item.href;
+  return (
+    <NavbarItem key={item.name}>
+      <Button
+        as={Link}
+        href={item.href}
+        variant="flat"
+        className={`bg-transparent p-2 text-lg hover:bg-white/10 transition-all
+          ${isActive ? "text-cyan " : "text-white"}`}
+      >
+        {item.name}
+      </Button>
+    </NavbarItem>
+  );
+})}
 
           {/* Services */}
           <NavbarItem>
@@ -92,18 +98,23 @@ const NavBar = () => {
           </NavbarItem>
 
           {/* Remaining Items */}
-          {menuItems.slice(1).map((item) => (
-            <NavbarItem key={item.name}>
-              <Button
-                as={Link}
-                href={item.href}
-                variant="flat"
-                className="bg-transparent text-white hover:bg-white/4 p-2 text-lg"
-              >
-                {item.name}
-              </Button>
-            </NavbarItem>
-          ))}
+          {menuItems.slice(1).map((item) => {
+  const isActive = pathname === item.href;
+  return (
+    <NavbarItem key={item.name}>
+      <Button
+        as={Link}
+        href={item.href}
+        variant="flat"
+        className={`bg-transparent p-2 text-lg hover:bg-white/10 transition-all
+          ${isActive ? "text-cyan " : "text-white"}`}
+      >
+        {item.name}
+      </Button>
+    </NavbarItem>
+  );
+})}
+
         </NavbarContent>
 
         {/* Right Side */}
