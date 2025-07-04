@@ -13,7 +13,7 @@ export const  tabsData = [
     id: 'mobile',
     label: 'Mobile',
     technologies: [
-      { name: 'Flutter',  logo: '/images/tech/Flutter.png'   },
+      { name: 'Flutter',  logo: '/images/tech/flutter.png'   },
       { name: 'React ',  logo: '/images/tech/react.png'  },
        { name: 'HTML 5',logo:  '/images/tech/html.png'   },
         { name: 'Ionic', logo: '/images/tech/ionic.png'  },
@@ -38,7 +38,7 @@ export const  tabsData = [
     id: 'backend',
     label: 'Back-End',
     technologies: [
-      { name: 'Flutter',  logo: '/images/tech/Flutter.png'   },
+      { name: 'Flutter',  logo: '/images/tech/flutter.png'   },
       { name: 'React ',  logo: '/images/tech/react.png'  },
        { name: 'HTML 5',logo:  '/images/tech/html.png'   },
        
@@ -51,13 +51,13 @@ export const  tabsData = [
     id: 'infra',
     label: 'Infra and Devops ',
     technologies: [
-      { name: 'Flutter',  logo: '/images/tech/Flutter.png'   },
+      { name: 'Flutter',  logo: '/images/tech/flutter.png'   },
       { name: 'React ',  logo: '/images/tech/react.png'  },
        { name: 'HTML 5',logo:  '/images/tech/html.png'   },
         { name: 'Ionic', logo: '/images/tech/ionic.png'  },
       { name: 'Type Script', logo: '/images/tech/ts.png'  },
       { name: 'React Js', logo: '/images/tech/react.png'  },
-       { name: 'Amazon',  logo: '/images/tech/Flutter.png'   },
+       { name: 'Amazon',  logo: '/images/tech/flutter.png'   },
       { name: 'Azure',  logo: '/images/tech/react.png'  },
        { name: 'HTML',logo:  '/images/tech/html.png'   },
 
@@ -70,7 +70,7 @@ export const  tabsData = [
     id: 'db',
     label: 'Database',
     technologies: [
-      { name: 'Flutter',  logo: '/images/tech/Flutter.png'   },
+      { name: 'Flutter',  logo: '/images/tech/flutter.png'   },
       { name: 'React',  logo: '/images/tech/react.png'  },
        { name: 'HTML 5',logo:  '/images/tech/html.png'   },
         { name: 'Ionic', logo: '/images/tech/ionic.png'  },
