@@ -15,6 +15,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
     },
     slides: { perView: 1, spacing: 20 },
     drag: true,
+
     breakpoints: {
       "(min-width: 640px)": {
         slides: { perView: 1, spacing: 24 },
@@ -42,8 +43,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
                   className={`keen-slider__slide px-3 py-6 transition-all duration-100 flex flex-col text-left 
                     ${
                       isCenter
-                        ? "opacity-100 blur-0"
-                        : "opacity-40 blur-[1px] "
+                        ? "  opacity-100 blur-0"
+                        : "  opacity-40 blur-[1px]  "
                     }`}
                 >
                   {/* Image */}

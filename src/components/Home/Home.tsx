@@ -9,7 +9,7 @@ import Testimonial from "./Testtominal";
 
 export default function HomePage() {
   return (
-    <>
+    <main>
     
         <HeroSection />
         <CompanyOverview />
@@ -21,6 +21,6 @@ export default function HomePage() {
          <Testimonial/>
     
       
-    </>
+    </main>
   );
 }
