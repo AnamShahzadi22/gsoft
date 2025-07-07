@@ -3,6 +3,7 @@ import { Card, CardBody } from "@heroui/react";
 import { fadeLeft } from "../HOC/animation";
 import AnimateOnView from "../HOC/Animation/MotionWrapper";
 import { serviceGroups } from "@/json/servicegroup";
+import Link from "next/link";
 
 export default function Services360() {
   return (
@@ -31,6 +32,7 @@ export default function Services360() {
                     key={index}
                     className="group bg-transparent hover:bg-navbg duration-300 shadow-none w-full max-w-xs mx-auto"
                   >
+                     <Link href={`/services/${service.slug}`}>
                     <CardBody className="p-4">
                       <div className="mb-4 flex items-center justify-center group-hover:text-white">
                         {service.icon}
@@ -44,6 +46,7 @@ export default function Services360() {
                       </h3>
                       <p className="text-base text-navbg group-hover:text-white leading-relaxed pt-0 p-4 text-center"> {service.description}</p>
                     </CardBody>
+                    </Link>
                    
                   </Card>
                 ))}

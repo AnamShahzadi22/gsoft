@@ -7,36 +7,52 @@ export const menuItems = [
   { name: "Life at Gsoft", href: "#" },
 ];
 
-export const serviceSections = [
+
+type ServiceItem = {
+  name: string;
+  slug: string;
+};
+
+type ServiceSection = {
+  title: string;
+  items: ServiceItem[];
+};
+
+
+export const serviceSections : ServiceSection[] = [
   {
     title: "Development",
     items: [
-      "Web App Development",
-      "Back-End Development",
-      "Mobile App Development",
-      "AI/ML Development",
+      { name: "Web App Development", slug: "web-app-development" },
+      { name: "Back-End Development", slug: "backend-development" },
+      { name: "Mobile App Development", slug: "mobile-app-development" },
+      { name: "AI/ML Development", slug: "ai-ml" },
     ],
   },
   {
     title: "Design",
     items: [
-      "UI/UX Design Services",
-      "Website Design",
-      "Mobile App Design",
-      "Logo Design",
+      { name: "UI/UX Design Services", slug: "ui-ux-design" },
+      { name: "Website Design", slug: "website-design" },
+      { name: "Mobile App Design", slug: "mobile-app" },
+      { name: "Logo Design", slug: "logo-design" },
     ],
   },
   {
     title: "Other Services",
-    items: ["DevOps Services", "Cloud Services", "Team Augmentation"],
+    items: [
+      { name: "DevOps Services", slug: "devops" },
+      { name: "Cloud Services", slug: "cloud-services" },
+      { name: "Team Augmentation", slug: "team-augmentation" },
+    ],
   },
   {
     title: "How We Work",
     items: [
-      "Discover",
-      "Planning & Designing",
-      "Development & Testing",
-      "Deploy & Support",
+      { name: "Discover", slug: "" },
+      { name: "Planning & Designing", slug: "" },
+      { name: "Development & Testing", slug: "" },
+      { name: "Deploy & Support", slug: "" },
     ],
   },
 ];

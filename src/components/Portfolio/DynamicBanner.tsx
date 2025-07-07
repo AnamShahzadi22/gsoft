@@ -1,25 +1,10 @@
 "use client";
 
+import { bannerImageMap, subtitleMap, titleMap } from "@/json/bannerdata";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const titleMap: Record<string, string> = {
-  "/portfolio": "Portfolio",
-  "/portfolio/tibbi-app": "Tibbi",
-  "/portfolio/omid-app": "Omid Life",
-  "/portfolio/careers-kitchen": "Career Kitchen",
-  "/portfolio/blend-menu": "Blend Menu",
-  "/services": "Our Services",
-};
 
-const subtitleMap: Record<string, string> = {
-  "/portfolio": "Our Work Speaks Itself",
-  "/services": "Fast, secure, stunning websites & Web Apps at unbeatable prices",
-};
-
-const bannerImageMap: Record<string, string | null> = {
-  "/services": "/images/services/bgservice.png",
-};
 
 export function DynamicBanner() {
   const pathname = usePathname();
@@ -48,7 +33,7 @@ export function DynamicBanner() {
           <p
             className={`mt-4 mx-auto ${
               hasImage
-                ? "text-2xl md:text-3xl leading-snug max-w-3xl"
+                ? "text-2xl md:text-2xl leading-snug max-w-4xl"
                 : "text-xl md:text-2xl"
             }`}
           >

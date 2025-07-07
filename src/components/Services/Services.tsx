@@ -3,6 +3,7 @@ import { Card, CardBody } from "@heroui/react";
 import { serviceGroups } from "@/json/servicegroup";
 import AnimateOnView from "@/components/HOC/Animation/MotionWrapper";
 import { fadeLeft } from "@/components/HOC/animation";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -30,7 +31,7 @@ export default function Services() {
 >
   {/* Cyan overlay on hover */}
   <div className="absolute inset-0 bg-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0" />
-
+ <Link href={`/services/${service.slug}`}>
                     <CardBody className="p-6">
                       <div className="mb-4 flex items-center justify-center text-white">
                         {service.icon}
@@ -46,6 +47,7 @@ export default function Services() {
                         {service.description}
                       </p>
                     </CardBody>
+                    </Link>
                   </Card>
                 ))}
               </div>
