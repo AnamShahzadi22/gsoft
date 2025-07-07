@@ -2,10 +2,16 @@ import { portfoliodata } from "@/json/portfolio";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export default async function PortfolioDetail(props: { params: { slug: string } }) {
-  const { slug } = props.params;
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function PortfolioDetail( { params }: Props) {
+  
   const allTech = portfoliodata.flatMap((tab) => tab.technologies);
-  const project = allTech.find((item) => item.slug === slug);
+  const project = allTech.find((item) => item.slug ===  params.slug);
 
   if (!project) return notFound();
 
