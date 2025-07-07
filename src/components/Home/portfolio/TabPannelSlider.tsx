@@ -6,8 +6,10 @@ import { useState } from "react";
 import { Card, CardBody } from "@heroui/react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
  export  function TabPanelWithSlider({ tab }: { tab: (typeof portfoliodata)[0] }) {
+    const router = useRouter();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     slideChanged(slider) {
@@ -40,7 +42,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
               return (
                 <div
                   key={tech.name}
-                  className={`keen-slider__slide px-3 py-6 transition-all duration-100 flex flex-col text-left 
+                   onClick={() => router.push(`/portfolio/${tech.slug}`)}
+                  className={`keen-slider__slide px-3 py-6 transition-all duration-100 flex flex-col text-left   cursor-pointer
                     ${
                       isCenter
                         ? "  opacity-100 blur-0"
@@ -64,7 +67,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
       {/* Left Arrow - show if not first */}
       {!isFirst && (
         <button
-          onClick={() => instanceRef.current?.prev()}
+         onClick={(e) => {
+                              e.stopPropagation(); // prevent card click
+                              instanceRef.current?.prev();
+                            }}
           className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center"
         >
           <ArrowLeft size={20} />
@@ -74,7 +80,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
       {/* Right Arrow - show if not last */}
       {!isLast && (
         <button
-          onClick={() => instanceRef.current?.next()}
+        onClick={(e) => {
+                              e.stopPropagation();
+                              instanceRef.current?.next();
+                            }}
           className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center"
         >
           <ArrowRight size={20} />
@@ -86,7 +95,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
                   {/* Description */}
                   {isCenter && (
-                    <p className="text-sm text-gray-600 mb-4 max-w-md">
+                    <p className="text-sm text-gray-600 mb-4 max-w-md  line-clamp-4">
                       {tech.description}
                     </p>
                   )}

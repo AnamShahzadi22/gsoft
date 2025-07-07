@@ -17,7 +17,7 @@ const ServicesDropdown = () => {
 
   const pathname = usePathname();
 const isActive = pathname.startsWith("/services"); 
-const servicesHref = "/services";
+const servicesHref = "services";
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);

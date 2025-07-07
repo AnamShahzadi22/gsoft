@@ -1,7 +1,7 @@
 import { DynamicBanner } from "@/components/Portfolio/DynamicBanner";
 import React from "react";
 
-export default function PortfolioLayout({
+export default function ServiceLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ export default function PortfolioLayout({
   return (
     <div>
      
-        <DynamicBanner />
+   <DynamicBanner />
 
       
       <main>{children}</main>
