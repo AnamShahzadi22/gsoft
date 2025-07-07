@@ -4,6 +4,7 @@ export const titleMap: Record<string, string> = {
   "/portfolio/omid-app": "Omid Life",
   "/portfolio/careers-kitchen": "Career Kitchen",
   "/portfolio/blend-menu": "Blend Menu",
+  "/services": "Our Services",
   "/services/website-design": "Website Design Services",
   "/services/mobile-app": "Mobile Application Design",
   "/services/ai-ml": "AI/ML Development Services",
