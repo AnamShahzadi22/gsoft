@@ -3,8 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 
-export default async function PortfolioDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params; 
+export default function PortfolioDetail({ params }: { params: { slug: string } }) {
+  const { slug } =  params; 
 
   const allTech = portfoliodata.flatMap((tab) => tab.technologies);
   const project = allTech.find((item) => item.slug === slug);
