@@ -19,4 +19,9 @@
   scrollbar-width: none;
 }
 
- 
+ .input {
+  @apply w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-1 focus:ring-black ;
+}
+.error {
+  @apply text-sm text-red-500 mt-1;
+}

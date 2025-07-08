@@ -5,6 +5,8 @@ import ClientProviders from "@/components/ClientProvider";
 import NavBar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import WhatsAppFloating from "@/components/Footer/WhatsapFloating";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const font = Montserrat({
 weight: ['100','200','300','400','500','600','700','800','900' ],
@@ -35,6 +37,7 @@ export default function RootLayout({
         <NavBar/>
 
   {children}
+  <ToastContainer position="top-right" autoClose={3000} />
   <Footer/>
 
   <WhatsAppFloating/>

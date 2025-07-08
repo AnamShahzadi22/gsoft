@@ -31,7 +31,7 @@ export function DynamicBanner() {
         </h1>
         {subtitle && (
           <p
-            className={`mt-4 mx-auto ${
+            className={`mt-2 mx-auto ${
               hasImage
                 ? "text-2xl md:text-2xl leading-snug max-w-4xl"
                 : "text-xl md:text-2xl"

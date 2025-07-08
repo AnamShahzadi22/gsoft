@@ -30,7 +30,7 @@ export default function AboutBanner() {
 
           <Button
             as={Link}
-            href="#"
+            href="/estimate-your-project"
             variant="bordered"
             radius="none"
             className="mt-6 sm:mt-8 text-lg font-semibold text-white border-white px-6 py-4 sm:px-8 sm:py-5 lg:px-30 lg:py-6 hover:bg-white/10 transition"

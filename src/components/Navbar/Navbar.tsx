@@ -23,7 +23,12 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
  
-  useEffect(() => {
+ useEffect(() => {
+    if (pathname === "/estimate-your-project") {
+      setScrolled(true);
+      return;
+    }
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setScrolled(scrollTop > 50);
@@ -33,9 +38,12 @@ const NavBar = () => {
       setScrollProgress(scrolledPercentage);
     };
 
+    // Set initial state based on scroll
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]); 
 
  
 
@@ -94,7 +102,7 @@ const NavBar = () => {
 
           {/* Services */}
           <NavbarItem>
-            <ServicesDropdown />
+            <ServicesDropdown   />
           </NavbarItem>
 
           {/* Remaining Items */}
@@ -123,7 +131,7 @@ const NavBar = () => {
             <div className="hidden xl:block">
               <Button
                 as={Link}
-                href="#"
+               href="/estimate-your-project"
                 variant="bordered"
                 className="text-white text-lg border-white  border-1 rounded  w-full hover:bg-white/10 "
               >
@@ -159,7 +167,7 @@ const NavBar = () => {
           ))}
 
           <NavbarMenuItem >
-            <ServicesDropdown />
+            <ServicesDropdown   onLinkClick={() => setMenuOpen(false)} />
           </NavbarMenuItem>
 
           {menuItems.slice(1).map((item, index) => (
@@ -177,7 +185,7 @@ const NavBar = () => {
           <NavbarMenuItem>
             <Button
               as={Link}
-              href="#"
+             href="/estimate-your-project"
               variant="bordered"
               className="text-white border-white  border-1 rounded  w-full hover:bg-white/10 "
               onClick={() => setMenuOpen(false)}

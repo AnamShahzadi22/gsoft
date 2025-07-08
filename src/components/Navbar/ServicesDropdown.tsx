@@ -8,9 +8,11 @@
   import Link from "next/link";
 
 
+type ServicesDropdownProps = {
+  onLinkClick?: () => void;
+};
 
-
-  const ServicesDropdown = () => {
+  const ServicesDropdown = ({ onLinkClick }: ServicesDropdownProps) => {
     const [open, setOpen] = useState(false); // desktop
     const [isMobileOpen, setIsMobileOpen] = useState(false); // mobile
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -101,9 +103,21 @@
         <div className="lg:hidden">
           <div
             className="flex justify-between items-center py-2 cursor-pointer"
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
+             onClick={() => {
+     setIsMobileOpen(!isMobileOpen)
+   
+  }}
           >
-            <span className="text-white">Services</span>
+          <Link
+  href="/services"
+  className="text-white"
+  onClick={() => {
+    onLinkClick?.();
+  }}
+>
+  Services
+</Link>
+
             {isMobileOpen ? (
               <ChevronUp size={18} className="text-white" />
             ) : (
@@ -120,6 +134,10 @@
       <Link
         href={`/services/${item.slug}`}
         className="text-white hover:text-cyan"
+        onClick={() => {
+                 
+                  onLinkClick?.();         // closes full mobile menu
+                }}
       >
         {item.name}
       </Link>

@@ -8,6 +8,7 @@ export const titleMap: Record<string, string> = {
   "/services/website-design": "Website Design Services",
   "/services/mobile-app": "Mobile Application Design",
   "/services/ai-ml": "AI/ML Development Services",
+ 
   
   "/services/mobile-app-development": "Mobile App Development",
   "/services/backend-development": "BackEnd Development",
@@ -16,7 +17,9 @@ export const titleMap: Record<string, string> = {
   "/services/devops": "DevOps Services Company",
   "/services/logo-design": "Logo Design Company",
   "/services/team-augmentation": "Team Augmentation Services",
-  "/services/cloud-services": "Cloud Services Company"
+  "/services/cloud-services": "Cloud Services Company",
+
+   "/life-at-gsoft": "Life At Gsoft",
 };
 
 export const subtitleMap: Record<string, string> = {
@@ -32,7 +35,9 @@ export const subtitleMap: Record<string, string> = {
   "/services/devops": "We also assist your group of clients to monitor how they work together when implementing APIs and DevOps solutions.",
   "/services/logo-design": "Your business is affected by developing activities and providing services at first. For the purpose of this section, we plan and store operations as you grow your business.",
   "/services/team-augmentation": "Power the assistance of our dedicated customer service and create business goals.",
-  "/services/cloud-services": "We are passionate about helping customers run in the digital highways to deliver client aspirations and the cloud."
+  "/services/cloud-services": "We are passionate about helping customers run in the digital highways to deliver client aspirations and the cloud.",
+ "/life-at-gsoft": "Our Work Speaks Itself",
+
 };
 
 export const bannerImageMap: Record<string, string | null> = {

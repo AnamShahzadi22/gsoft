@@ -3,8 +3,8 @@ export const menuItems = [
   { name: "Portfolio", href: "/portfolio" },
   { name: "Blog", href: "#" },
   { name: "Careers", href: "#" },
-  { name: "Contact Us", href: "#" },
-  { name: "Life at Gsoft", href: "#" },
+  { name: "Contact Us", href: "/contact" },
+  { name: "Life at Gsoft", href: "/life-at-gsoft" },
 ];
 
 
