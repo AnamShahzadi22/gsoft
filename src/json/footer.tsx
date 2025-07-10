@@ -2,26 +2,26 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaBehance } from "react-icons/fa";
 
 export const companyLinks = [
-  { name: "About", href: "#" },
-  { name: "Life at Gsoft",  href: "#"  },
-  { name: "Contact us", href: "#"  },
-  { name: "Careers",  href: "#"  },
+  { name: "About", href: "/about" },
+  { name: "Life at Gsoft",  href: "/life-at-gsoft"  },
+  { name: "Contact us", href: "/contact"  },
+  { name: "Careers",  href: "/careers"  },
 ];
 
 export const services1 = [
-  { name: "Website Design Services",  href: "#" },
-  { name: "Mobile Application Design",  href: "#" },
-  { name: "AI/ML Development Services",  href: "#" },
-  { name: "Mobile App Development", href: "#"  },
-  { name: "Back-End Development",  href: "#"  },
+  { name: "Website Design Services",  href: "/services/website-design" },
+  { name: "Mobile Application Design",  href: "/services/mobile-app" },
+  { name: "AI/ML Development Services",  href: "/services/ai-ml" },
+  { name: "Mobile App Development", href: "/services/mobile-app-development"  },
+  { name: "Back-End Development",  href: "/services/backend-development"  },
 ];
 
 export const services2 = [
-  { name: "Web App Development", href: "#" },
-  { name: "UI/UX Design Services", href: "#"  },
-  { name: "DevOps Services Company",  href: "#"  },
-  { name: "Logo Design Company",  href: "#"  },
-  { name: "Team Augmentation Services",  href: "#"  },
+  { name: "Web App Development", href: "/services/web-app-development" },
+  { name: "UI/UX Design Services", href: "/services/ui-ux-design" },
+  { name: "DevOps Services Company",  href: "/services/devops"  },
+  { name: "Logo Design Company",  href: "/services/logo-design"  },
+  { name: "Team Augmentation Services",  href: "/services/team-augmentation"  },
 ];
 
 export const technologies = [
