@@ -8,6 +8,7 @@ export const titleMap: Record<string, string> = {
   "/services/website-design": "Website Design Services",
   "/services/mobile-app": "Mobile Application Design",
   "/services/ai-ml": "AI/ML Development Services",
+  "/careers": "Building What's Next!",
  
   
   "/services/mobile-app-development": "Mobile App Development",

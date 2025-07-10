@@ -7,7 +7,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import { ChevronDown } from "lucide-react";
 import { toast } from "react-toastify";
-import { notFound } from "next/navigation";
+import { Button } from "@heroui/react";
 
 
 const schema = z.object({
@@ -24,7 +24,7 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-export default function EstimateForm({ slug }: { slug: string }) {
+export default function EstimateForm() {
 
 
 
@@ -38,6 +38,7 @@ export default function EstimateForm({ slug }: { slug: string }) {
   } = useForm<FormData>({
     resolver: zodResolver(schema),
     mode: "onBlur",
+     reValidateMode: "onChange",
   });
 
   const [file, setFile] = useState<File | null>(null);
@@ -50,9 +51,6 @@ export default function EstimateForm({ slug }: { slug: string }) {
   };
 
 
-    if (slug !== "estimate-your-project") {
-      return notFound();
-    }
 
 
   const onSubmit = (data: FormData) => {
@@ -219,7 +217,7 @@ export default function EstimateForm({ slug }: { slug: string }) {
         </div>
 
         {/* Submit Button */}
-        <button
+        <Button
           type="submit"
           className={clsx(
             "w-full py-2 rounded font-bold transition text-white text-lg",
@@ -228,7 +226,7 @@ export default function EstimateForm({ slug }: { slug: string }) {
           disabled={!isValid }
         >
           Get Estimate
-        </button>
+        </Button>
       </form>
     </div>
   );

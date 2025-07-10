@@ -2,7 +2,7 @@ export const menuItems = [
   { name: "Company", href: "/about" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Blog", href: "#" },
-  { name: "Careers", href: "#" },
+  { name: "Careers", href: "/careers" },
   { name: "Contact Us", href: "/contact" },
   { name: "Life at Gsoft", href: "/life-at-gsoft" },
 ];

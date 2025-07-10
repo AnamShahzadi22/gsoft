@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "react-toastify";
+import { Button } from "@heroui/react";
+import clsx from "clsx";
+
 
 const formSchema = z.object({
   name: z.string().min(2, "This field is required"),
@@ -83,15 +86,17 @@ export default function ContactForm() {
           {errors.message && <p className="error">{errors.message.message}</p>}
         </div>
 
-        <button
+         <Button
           type="submit"
-          disabled={!isValid}
-          className={`w-full py-3 rounded transition-colors ${
-            isValid ? "bg-cyan hover:bg-cyan-500 text-white " : "bg-gray-300 text-black"
-          }`}
+          className={clsx(
+            "w-full py-2 rounded font-bold transition text-white text-lg",
+            isValid  ? "bg-cyan hover:bg-cyan-500" : "bg-gray-200"
+          )}
+          disabled={!isValid }
         >
          Submit
-        </button>
+        </Button>
+
       </form>
     </div>
   );
