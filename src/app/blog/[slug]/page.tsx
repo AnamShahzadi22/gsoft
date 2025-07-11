@@ -32,7 +32,7 @@ export default async function BlogDetailPage({
           {blog.content}
         </div>
 
-        <h1 className="text-2xl font-semibold mb-10">{blog.title}</h1>
+        <h1 className="text-2xl font-semibold mt-10 mb-3">{blog.title}</h1>
         <div className="prose prose-lg max-w-none text-gray-800">
           {blog.content}
         </div>
