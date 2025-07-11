@@ -4,10 +4,8 @@ import { notFound } from "next/navigation";
 
 export default async function PortfolioDetail({
   params,
-}: {
-  params: Promise<{ slug: string }>;
+}: { params: Promise<{ slug: string }>;
 }) {
-  // params is a Promise! await it…
   const { slug } = await params;
 
   const allTech = portfoliodata.flatMap((tab) => tab.technologies);
