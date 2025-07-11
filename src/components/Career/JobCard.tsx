@@ -26,7 +26,7 @@ export default function JobCard({ title, location, experience, slug }: JobCardPr
 
 
          <Link
-          href={`/careers/${slug}`}
+          href={`/jobDetails/${slug}`}
           className=" font-semibold text-black "
         >
           Apply Now <IoArrowForward className=" ml-2 text-cyan text-xl font-bold"/>

@@ -9,8 +9,6 @@ export const titleMap: Record<string, string> = {
   "/services/mobile-app": "Mobile Application Design",
   "/services/ai-ml": "AI/ML Development Services",
   "/careers": "Building What's Next!",
- 
-  
   "/services/mobile-app-development": "Mobile App Development",
   "/services/backend-development": "BackEnd Development",
   "/services/web-app-development": "Web App Development",
@@ -19,8 +17,11 @@ export const titleMap: Record<string, string> = {
   "/services/logo-design": "Logo Design Company",
   "/services/team-augmentation": "Team Augmentation Services",
   "/services/cloud-services": "Cloud Services Company",
-
    "/life-at-gsoft": "Life At Gsoft",
+   "/blog": "Blog",
+   "/blog/claude-sonnet-opus": "Claude 4 Opus & Sonnet",
+  "/blog/ai-middle-manager": "AI for the  Middle Manager",
+ 
 };
 
 export const subtitleMap: Record<string, string> = {
@@ -38,6 +39,10 @@ export const subtitleMap: Record<string, string> = {
   "/services/team-augmentation": "Power the assistance of our dedicated customer service and create business goals.",
   "/services/cloud-services": "We are passionate about helping customers run in the digital highways to deliver client aspirations and the cloud.",
  "/life-at-gsoft": "Our Work Speaks Itself",
+  "/blog/claude-sonnet-opus": "2025-07-08",
+  "/blog/ai-middle-manager": "2025-07-09",
+ 
+
 
 };
 

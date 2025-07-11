@@ -24,7 +24,10 @@ const NavBar = () => {
   const pathname = usePathname();
  
  useEffect(() => {
-    if (pathname === "/estimate-your-project") {
+    if (pathname === "/estimate-your-project" || pathname === "/jobDetails/back-end-developer-at-global-software-consulting" ||
+  pathname === "/jobDetails/front-end-developer-at-global-software-consulting" ||
+  pathname === "/jobDetails/machine-learning-artificial-intelligence-developer-at-global-software-consulting" ||
+  pathname === "/jobDetails/business-development-manager-at-global-software-consulting") {
       setScrolled(true);
       return;
     }

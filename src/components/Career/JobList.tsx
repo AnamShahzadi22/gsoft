@@ -5,10 +5,10 @@ import JobFilters from "./JobFilter";
 import { CircularProgress } from "@heroui/react";
 
 const jobs = [
-  { title: "Back-End (Node.js) Developer", location: "On-site (Lahore)", experience: "2 Years", slug: "node-dev", category: "development" },
-  { title: "Front-End (React.js) Developer", location: "On-site (Lahore)", experience: "1 Years", slug: "react-dev", category: "development" },
-  { title: "Machine Learning / AI Developer", location: "On-site (Lahore)", experience: "2 Years", slug: "ml-dev", category: "development" },
-  { title: "Business Management", location: "On-site (Lahore)", experience: "6 Months", slug: "ma", category: "management" },
+  { title: "Back-End (Node.js) Developer", location: "On-site (Lahore)", experience: "2 Years", slug: "back-end-developer-at-global-software-consulting", category: "development" },
+  { title: "Front-End (React.js) Developer", location: "On-site (Lahore)", experience: "1 Years", slug: "front-end-developer-at-global-software-consulting", category: "development" },
+  { title: "Machine Learning / AI Developer", location: "On-site (Lahore)", experience: "2 Years", slug: "machine-learning-artificial-intelligence-developer-at-global-software-consulting", category: "development" },
+  { title: "Business Management", location: "On-site (Lahore)", experience: "6 Months", slug: "business-development-manager-at-global-software-consulting", category: "management" },
 ];
 
 export default function JobList() {
