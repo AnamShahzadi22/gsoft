@@ -1,9 +1,13 @@
+
+"use client";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { serviceDetails, Section } from "@/json/servicedetails";
 import AnimateOnView from "@/components/HOC/Animation/MotionWrapper";
 import { fadeLeft } from "@/components/HOC/animation";
 import { FiCheck } from "react-icons/fi";
+import { Button } from "@heroui/react";
+import Link from "next/link";
 
 export default function ServiceDetails({ slug }: { slug: string }) {
   const data = serviceDetails.find(service => service.slug === slug);
@@ -50,9 +54,13 @@ export default function ServiceDetails({ slug }: { slug: string }) {
 
             {/* Button */}
             <div className="mt-6">
-              <button className="bg-cyan text-black shadow hover:shadow-md font-semibold px-5 py-2 rounded transition-all">
+              <Button  
+              
+               as={Link}
+     href="/estimate-your-project"
+              className="bg-cyan text-black shadow hover:shadow-md font-semibold px-5 py-2 rounded transition-all">
                 Get Quote
-              </button>
+              </Button>
             </div>
           </div>
         </div>

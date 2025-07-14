@@ -2,7 +2,7 @@
 
 import { bannerImageMap, subtitleMap, titleMap } from "@/json/bannerdata";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 
 
 
@@ -14,6 +14,9 @@ export function DynamicBanner() {
   const subtitle = subtitleMap[cleanPath] || "";
   const bgImage = bannerImageMap[cleanPath];
   const hasImage = !!bgImage;
+  const [search, setSearch] = useState("");
+
+   const isBlogPage = cleanPath === "/blog";
 
   return (
     <header
@@ -29,16 +32,37 @@ export function DynamicBanner() {
         <h1 className= "font-bold  text-4xl md:text-5xl">
           {title}
         </h1>
-        {subtitle && (
-          <p
-            className={`mt-2 mx-auto ${
-              hasImage
-                ? "text-2xl md:text-2xl leading-snug max-w-4xl"
-                : "text-xl md:text-2xl"
-            }`}
-          >
-            {subtitle}
-          </p>
+        {/* Subtitle or Search for blog page */}
+        {isBlogPage ? (
+          <>
+            {/* Show on small screens only */}
+            <div className="mt-6 lg:hidden flex justify-center">
+              <div className="flex w-full max-w-xl rounded overflow-hidden">
+                <input
+                  type="text"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Search the blog"
+                  className="flex-1 px-4 py-3 bg-slate-800 text-white placeholder-gray-300 focus:outline-none"
+                />
+                <button className="bg-cyan text-white px-6 text-lg font-medium">
+                  Search
+                </button>
+              </div>
+            </div>
+          </>
+        ) : (
+          subtitle && (
+            <p
+              className={`mt-2 mx-auto ${
+                hasImage
+                  ? "text-2xl md:text-2xl leading-snug max-w-4xl"
+                  : "text-xl md:text-2xl"
+              }`}
+            >
+              {subtitle}
+            </p>
+          )
         )}
       </div>
     </header>

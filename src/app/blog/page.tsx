@@ -31,7 +31,7 @@ export default function BlogListPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
       {/* Left: Article Info */}
-      <aside className="hidden lg:block lg:col-span-1 bg-white p-2 px-7 rounded-lg shadow  max-h-[490px] overflow-auto">
+      <aside className="hidden lg:block lg:col-span-1 bg-white p-2 px-7 rounded-lg shadow  max-h-[490px] overflow-auto  no-scrollbar">
         <h3 className="text-xl font-bold mb-6">Articles</h3>
         <p className="text-lg   ">
           Mute on the boring weblogs. Here is something fresh in the articles billet! We uncover what you want to read. Whether you are a marketer exploring the marketing guides or a non-specialist with an online business looking for some insights and tips, we have something for everyone.
