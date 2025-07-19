@@ -19,6 +19,7 @@ This project is a **responsive clone** of the official [GSoft Consulting](https:
 - **Next.js** – Server-side rendering and routing
 - **Responsive Design** – Mobile-first layout
 - **Framer Motion** – For animations
+  
+<img width="1891" height="873" alt="image" src="https://github.com/user-attachments/assets/5f83ba4c-afd8-4ec5-9ce3-e97ffc495e3e" />
 <img width="1888" height="874" alt="image" src="https://github.com/user-attachments/assets/229239be-815a-4400-9882-fad54d3fe5e4" />
 <img width="1891" height="874" alt="image" src="https://github.com/user-attachments/assets/348345b1-b0bb-4f06-93fb-2c2a5e6e60da" />
-<img width="1891" height="873" alt="image" src="https://github.com/user-attachments/assets/5f83ba4c-afd8-4ec5-9ce3-e97ffc495e3e" />
